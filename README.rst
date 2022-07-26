@@ -36,7 +36,7 @@ Creating a new formula from this template is as easy as:
 
 .. code-block:: bash
 
-    cookiecutter https://github.com/lkubb/tool-template-formula
+    cookiecutter https://github.com/lkubb/salt-template-formula
 
 For cookiecutter, this is where the journey ends.
 
@@ -44,7 +44,7 @@ The recommended way to use this template goes a little further though, since (a)
 
 .. code-block:: bash
 
-    cruft create https://github.com/lkubb/tool-template-formula
+    cruft create https://github.com/lkubb/salt-template-formula
 
 Customization
 ~~~~~~~~~~~~~
