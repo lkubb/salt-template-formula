@@ -9,7 +9,7 @@
 Ensure {= cookiecutter.name =} APT repository can be managed:
   pkg.installed:
     - pkgs:
-      - python-apt                    # required by Salt
+      - python3-apt                   # required by Salt
 {%-   if 'Ubuntu' == grains['os'] %}
       - python-software-properties    # to better support PPA repositories
 {%-   endif %}
