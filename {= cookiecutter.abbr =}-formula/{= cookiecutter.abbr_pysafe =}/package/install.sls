@@ -10,6 +10,6 @@ include:
   - {{ slsdotpath }}.repo
 {!- endif !}
 
-{= cookiecutter.abbr_pysafe =}-package-install-pkg-installed:
+{= cookiecutter.name =} is installed:
   pkg.installed:
     - name: {{ {= cookiecutter.abbr_pysafe =}.lookup.pkg.name }}

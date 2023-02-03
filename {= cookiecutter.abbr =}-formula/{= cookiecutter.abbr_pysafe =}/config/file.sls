@@ -9,17 +9,17 @@
 include:
   - {{ sls_package_install }}
 
-{= cookiecutter.abbr_pysafe =}-config-file-file-managed:
+{= cookiecutter.abbr_pysafe =} configuration is managed:
   file.managed:
     - name: {{ {= cookiecutter.abbr_pysafe =}.lookup.config }}
-    - source: {{ files_switch(['example.tmpl'],
-                              lookup='{= cookiecutter.abbr_pysafe =}-config-file-file-managed'
+    - source: {{ files_switch(["{= cookiecutter.config.split('/') | last =}", "{= cookiecutter.config.split('/') | last ~ ".j2" =}"],
+                              lookup='{= cookiecutter.abbr_pysafe =} configuration is managed'
                  )
               }}
-    - mode: 644
+    - mode: '0644'
     - user: root
     - group: {{ {= cookiecutter.abbr_pysafe =}.lookup.rootgroup }}
-    - makedirs: True
+    - makedirs: true
     - template: jinja
     - require:
       - sls: {{ sls_package_install }}

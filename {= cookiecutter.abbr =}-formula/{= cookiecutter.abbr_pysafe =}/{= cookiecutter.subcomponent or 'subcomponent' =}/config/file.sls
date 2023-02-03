@@ -14,7 +14,7 @@ include:
   - {{ sls_config_file }}
 {!- endif !}
 
-{= cookiecutter.abbr_pysafe =}-{= cookiecutter.subcomponent =}-config-file-file-managed:
+{= cookiecutter.abbr_pysafe =} {= cookiecutter.subcomponent =} config is managed:
   file.managed:
     - name: {{ {= cookiecutter.abbr_pysafe =}.lookup.{= cookiecutter.subcomponent =}.config }}
     - source: {{ files_switch(['{= cookiecutter.subcomponent =}-example.tmpl'],

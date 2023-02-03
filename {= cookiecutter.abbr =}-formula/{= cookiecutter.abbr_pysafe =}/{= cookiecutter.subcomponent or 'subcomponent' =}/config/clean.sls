@@ -13,7 +13,7 @@ include:
   - {{ sls_service_clean }}
 {!- endif !}
 
-{= cookiecutter.abbr_pysafe =}-{= cookiecutter.subcomponent =}-config-clean-file-absent:
+{= cookiecutter.abbr_pysafe =} {= cookiecutter.subcomponent =} config is absent:
   file.absent:
     - name: {{ {= cookiecutter.abbr_pysafe =}.lookup.{= cookiecutter.subcomponent =}.config }}
 {!- if cookiecutter.service !}
