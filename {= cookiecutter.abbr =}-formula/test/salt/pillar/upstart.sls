@@ -7,6 +7,10 @@
     # Just for testing purposes
     winner: lookup
     added_in_lookup: lookup_value
+{!- if cookiecutter.pkg !}
+    pkg:
+      name: {= cookiecutter.pkg =}
+{!- endif !}
 {!- if cookiecutter.needs_repo !}
     enablerepo:
       stable: true

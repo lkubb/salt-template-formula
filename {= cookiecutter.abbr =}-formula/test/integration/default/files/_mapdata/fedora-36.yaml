@@ -8,6 +8,10 @@ values:
   lookup:
     arch: amd64
     rootgroup: root
+{!- if cookiecutter.pkg !}
+    pkg:
+      name: {= cookiecutter.pkg =}
+{!- endif !}
 {!- if cookiecutter.needs_repo !}
     enablerepo:
       stable: true
