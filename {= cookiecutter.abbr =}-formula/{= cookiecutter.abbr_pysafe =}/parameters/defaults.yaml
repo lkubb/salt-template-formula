@@ -6,7 +6,7 @@
 values:
   lookup:
     rootgroup: root
-{!- if cookiecutter.pkg !}
+{!- if cookiecutter.pkg and "pkg" not in cookiecutter._lookup !}
     pkg:
       name: {= cookiecutter.pkg =}
 {!- endif !}
@@ -14,10 +14,10 @@ values:
     enablerepo:
       stable: true
 {!- endif !}
-{!- if cookiecutter.config !}
+{!- if cookiecutter.config and "config" not in cookiecutter._lookup !}
     config: '{= cookiecutter.config =}'
 {!- endif !}
-{!- if cookiecutter.service !}
+{!- if cookiecutter.service and "service" not in cookiecutter._lookup !}
     service:
       name: {= cookiecutter.service =}
 {!- endif !}
