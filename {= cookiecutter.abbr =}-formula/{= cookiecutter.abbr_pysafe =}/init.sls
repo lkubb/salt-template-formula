@@ -1,11 +1,11 @@
 # vim: ft=sls
 
 {#-
-  *Meta-state*.
+    *Meta-state*.
 
-  This installs the {= cookiecutter.abbr_pysafe =} package{! if cookiecutter.config !},
-  manages the {= cookiecutter.abbr_pysafe =} configuration file{! endif !}
-  {! if cookiecutter.service !}and then starts the associated {= cookiecutter.abbr_pysafe =} service.{! endif !}
+    This installs the {= cookiecutter.abbr_pysafe =} package{! if cookiecutter.config !},
+    manages the {= cookiecutter.abbr_pysafe =} configuration file{! endif !}
+    {! if cookiecutter.service !}and then starts the associated {= cookiecutter.abbr_pysafe =} service.{! endif !}
 #}
 
 include:
