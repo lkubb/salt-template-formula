@@ -1,8 +1,8 @@
 # vim: ft=sls
 
 {#-
-    This state will remove the {= cookiecutter.abbr_pysafe =} package{! if cookiecutter.config !} and has a depency on
-    ``{= cookiecutter.abbr_pysafe =}.config.clean`` via include list{! endif !}.
+    Removes the {= cookiecutter.abbr_pysafe =} package{! if cookiecutter.config !}.
+    Has a depency on `{= cookiecutter.abbr_pysafe =}.config.clean`_{! endif !}.
 #}
 
 {%- set tplroot = tpldir.split('/')[0] %}

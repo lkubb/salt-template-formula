@@ -1,8 +1,8 @@
 # vim: ft=sls
 
 {#-
-    This state will start the {= cookiecutter.abbr_pysafe =} service{! if cookiecutter.config !}
-    and has a dependency on ``{= cookiecutter.abbr_pysafe =}.config`` via include list{! endif !}.
+    Starts the {= cookiecutter.abbr_pysafe =} service and enables it at boot time.
+    Has a dependency on `{= cookiecutter.abbr_pysafe =}.{= "config" if cookiecutter.config else "package" !}`_.
 #}
 
 include:
