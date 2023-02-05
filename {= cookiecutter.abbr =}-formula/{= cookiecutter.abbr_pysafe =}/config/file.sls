@@ -8,11 +8,11 @@
 include:
   - {{ sls_package_install }}
 
-{= cookiecutter.abbr_pysafe =} configuration is managed:
+{= cookiecutter.name =} configuration is managed:
   file.managed:
     - name: {{ {= cookiecutter.abbr_pysafe =}.lookup.config }}
     - source: {{ files_switch(["{= cookiecutter.config.split('/') | last =}", "{= cookiecutter.config.split('/') | last ~ ".j2" =}"],
-                              lookup='{= cookiecutter.abbr_pysafe =} configuration is managed'
+                              lookup="{= cookiecutter.abbr_pysafe =} configuration is managed"
                  )
               }}
     - mode: '0644'

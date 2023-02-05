@@ -151,7 +151,7 @@ class StateRegistry:
         # ensure no prefix lists the root
         self.prefixes[()] = self.reg
         self.avoid_init_dup = avoid_init_dup
-        self.sort_list = tuple(sort_list) or ("init", "clean", "package", "config", "service")
+        self.sort_list = tuple(sort_list or ("init", "clean", "package", "config", "service"))
 
     def _default_sort(self, a):
         """
