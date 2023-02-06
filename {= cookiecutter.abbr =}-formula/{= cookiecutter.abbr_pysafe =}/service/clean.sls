@@ -10,4 +10,4 @@
 {= cookiecutter.name =} is dead:
   service.dead:
     - name: {{ {= cookiecutter.abbr_pysafe =}.lookup.service.name }}
-    - enable: False
+    - enable: false

@@ -15,7 +15,7 @@ include:
 {= cookiecutter.name =} is running:
   service.running:
     - name: {{ {= cookiecutter.abbr_pysafe =}.lookup.service.name }}
-    - enable: True
+    - enable: true
 {!- if cookiecutter.config !}
     - watch:
       - sls: {{ sls_config_file }}
