@@ -38,6 +38,6 @@
       # The entries under `source_files` are prepended to the default source files
       # given for the state
     source_files:
-      {= cookiecutter.abbr_pysafe =}-config-file-file-managed:
+      {= cookiecutter.name =} configuration is managed:
         - 'example_alt.tmpl'
         - 'example_alt.tmpl.jinja'
