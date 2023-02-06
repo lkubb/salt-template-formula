@@ -1,7 +1,7 @@
 # vim: ft=sls
 
-{%- set tplroot = tpldir.split('/')[0] %}
-{%- set sls_package_install = tplroot ~ '.package.install' %}
+{%- set tplroot = tpldir.split("/")[0] %}
+{%- set sls_package_install = tplroot ~ ".package.install" %}
 {%- from tplroot ~ "/map.jinja" import mapdata as {= cookiecutter.abbr_pysafe =} with context %}
 {%- from tplroot ~ "/libtofs.jinja" import files_switch with context %}
 
@@ -11,7 +11,7 @@ include:
 {= cookiecutter.name =} configuration is managed:
   file.managed:
     - name: {{ {= cookiecutter.abbr_pysafe =}.lookup.config }}
-    - source: {{ files_switch(["{= cookiecutter.config.split('/') | last =}", "{= cookiecutter.config.split('/') | last ~ ".j2" =}"],
+    - source: {{ files_switch(["{= cookiecutter.config.split("/") | last =}", "{= cookiecutter.config.split("/") | last ~ ".j2" =}"],
                               lookup="{= cookiecutter.name =} configuration is managed"
                  )
               }}

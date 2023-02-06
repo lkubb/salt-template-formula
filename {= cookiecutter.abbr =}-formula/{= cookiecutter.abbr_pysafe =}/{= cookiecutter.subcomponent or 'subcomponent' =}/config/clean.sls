@@ -6,9 +6,9 @@
     `{= cookiecutter.abbr_pysafe =}.service.running`_ {! endif !}.
 #}
 
-{%- set tplroot = tpldir.split('/')[0] %}
+{%- set tplroot = tpldir.split("/")[0] %}
 {!- if cookiecutter.service !}
-{%- set sls_service_clean = tplroot ~ '.service.clean' %}
+{%- set sls_service_clean = tplroot ~ ".service.clean" %}
 {!- endif !}
 {%- from tplroot ~ "/map.jinja" import mapdata as {= cookiecutter.abbr_pysafe =} with context %}
 
