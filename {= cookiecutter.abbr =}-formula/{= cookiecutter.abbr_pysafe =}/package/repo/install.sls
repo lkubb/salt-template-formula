@@ -3,16 +3,7 @@
 {%- set tplroot = tpldir.split("/")[0] %}
 {%- from tplroot ~ "/map.jinja" import mapdata as {= cookiecutter.abbr_pysafe =} with context %}
 
-{%- if grains["os"] in ["Debian", "Ubuntu"] %}
-
-Ensure {= cookiecutter.name =} APT repository can be managed:
-  pkg.installed:
-    - pkgs:
-      - python3-apt                   # required by Salt
-{%-   if "Ubuntu" == grains["os"] %}
-      - python-software-properties    # to better support PPA repositories
-{%-   endif %}
-{%- endif %}
+# There is no need for python-apt anymore.
 
 {%- for reponame, enabled in {= cookiecutter.abbr_pysafe =}.lookup.enablerepo.items() %}
 {%-   if enabled %}
