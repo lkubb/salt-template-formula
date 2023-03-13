@@ -2,15 +2,15 @@
 # yamllint disable rule:comments-indentation
 ---
 {= cookiecutter.abbr_pysafe =}:
-{!- if cookiecutter._settings !}
+{!- if cookiecutter.settings !}
 
-  {= cookiecutter._settings | yaml(False) | indent(2) =}
+  {= cookiecutter.settings | yaml(False) | indent(2) =}
 {!- endif !}
 
-{!- if cookiecutter._lookup !}
+{!- if cookiecutter.lookup !}
 
   lookup:
-    {= cookiecutter._lookup | yaml(False) | indent(4) =}
+    {= cookiecutter.lookup | yaml(False) | indent(4) =}
 {!- endif !}
 
   tofs:

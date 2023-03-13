@@ -6,7 +6,7 @@
     # Just for testing purposes
     winner: lookup
     added_in_lookup: lookup_value
-{!- if cookiecutter.pkg and "pkg" not in cookiecutter._lookup !}
+{!- if cookiecutter.pkg and "pkg" not in cookiecutter.lookup !}
     pkg:
       name: {= cookiecutter.pkg =}
 {!- endif !}
@@ -14,10 +14,10 @@
     enablerepo:
       stable: true
 {!- endif !}
-{!- if cookiecutter.config and "config" not in cookiecutter._lookup !}
+{!- if cookiecutter.config and "config" not in cookiecutter.lookup !}
     config: '{= cookiecutter.config =}'
 {!- endif !}
-{!- if cookiecutter.service and "service" not in cookiecutter._lookup !}
+{!- if cookiecutter.service and "service" not in cookiecutter.lookup !}
     service:
       name: {= cookiecutter.service =}
 {!- endif !}
@@ -25,11 +25,11 @@
     {= cookiecutter.subcomponent =}:
       config: {= cookiecutter.subcomponent_config =}
 {!- endif !}
-{!- if cookiecutter._lookup !}
-    {= cookiecutter._lookup | yaml(False) | indent(4) =}
+{!- if cookiecutter.lookup !}
+    {= cookiecutter.lookup | yaml(False) | indent(4) =}
 {!- endif !}
-{!- if cookiecutter._settings !}
-  {= cookiecutter._settings | yaml(False) | indent(2) =}
+{!- if cookiecutter.settings !}
+  {= cookiecutter.settings | yaml(False) | indent(2) =}
 {!- endif !}
 
   tofs:
