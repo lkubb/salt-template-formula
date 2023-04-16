@@ -17,7 +17,7 @@
     - enabled: 1
 {%-     endif %}
     - require_in:
-      - {= cookiecutter.abbr_pysafe =}-package-install-pkg-installed
+      - {= cookiecutter.name =} is installed
 
 {%-   else %}
 
@@ -29,6 +29,6 @@
 {%-       endif %}
 {%-     endfor %}
     - require_in:
-      - {= cookiecutter.abbr_pysafe =}-package-install-pkg-installed
+      - {= cookiecutter.name =} is installed
 {%-   endif %}
 {%- endfor %}
