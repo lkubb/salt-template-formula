@@ -21,7 +21,7 @@
     service:
       name: {= cookiecutter.service =}
 {!- endif !}
-{!- if cookiecutter.subcomponent and cookiecutter.subcomponent_config !}
+{!- if cookiecutter.subcomponent and cookiecutter.subcomponent not in cookiecutter.lookup and cookiecutter.subcomponent_config !}
     {= cookiecutter.subcomponent =}:
       config: {= cookiecutter.subcomponent_config =}
 {!- endif !}

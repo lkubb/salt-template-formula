@@ -19,7 +19,7 @@ values:
 {!- if cookiecutter.config and "config" not in cookiecutter.lookup !}
     config: '{= cookiecutter.config =}'
 {!- endif !}
-{!- if cookiecutter.service and "service" not in cookiecutter.lookup !}
+{!- if cookiecutter.subcomponent and cookiecutter.subcomponent not in cookiecutter.lookup and cookiecutter.subcomponent_config !}
     service:
       name: {= cookiecutter.service =}
 {!- endif !}
