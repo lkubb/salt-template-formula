@@ -1,7 +1,7 @@
 # vim: ft=sls
 
 {#-
-    Removes the configuration of the {= cookiecutter.abbr_pysafe =} subcomponent{! if cookiecutter.service !}
+    Removes the configuration of the {= cookiecutter.abbr_pysafe =} {= cookiecutter.subcomponent =} subcomponent{! if cookiecutter.service !}
     and reloads the {= cookiecutter.abbr_pysafe =} service by a dependency on
     `{= cookiecutter.abbr_pysafe =}.service.running`_ {! endif !}.
 #}
