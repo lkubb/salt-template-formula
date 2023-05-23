@@ -2,7 +2,7 @@
 
 {#-
     Removes the {= cookiecutter.abbr_pysafe =} package{! if cookiecutter.config !}.
-    Has a depency on `{= cookiecutter.abbr_pysafe =}.config.clean`_{! endif !}.
+    Has a dependency on `{= cookiecutter.abbr_pysafe =}.config.clean`_{! endif !}.
 #}
 
 {%- set tplroot = tpldir.split("/")[0] %}
