@@ -5,7 +5,7 @@
 {%- set sls_config_file = tplroot ~ ".config.file" %}
 {!- endif !}
 {%- from tplroot ~ "/map.jinja" import mapdata as {= cookiecutter.abbr_pysafe =} with context %}
-{%- from tplroot ~ "/libtofs.jinja" import files_switch with context %}
+{%- from tplroot ~ "/libtofsstack.jinja" import files_switch with context %}
 
 {!- if cookiecutter.config !}
 
@@ -16,9 +16,11 @@ include:
 {= cookiecutter.abbr_pysafe =} {= cookiecutter.subcomponent =} config is managed:
   file.managed:
     - name: {{ {= cookiecutter.abbr_pysafe =}.lookup.{= cookiecutter.subcomponent =}.config }}
-    - source: {{ files_switch(["{= cookiecutter.subcomponent =}-example.tmpl"],
-                              lookup="{= cookiecutter.abbr_pysafe =} {= cookiecutter.subcomponent =} config is managed",
-                              use_subpath=True
+    - source: {{ files_switch(
+                    ["{= cookiecutter.subcomponent =}-example.tmpl"],
+                    config={= cookiecutter.abbr_pysafe =},
+                    lookup="{= cookiecutter.abbr_pysafe =} {= cookiecutter.subcomponent =} config is managed",
+                    use_subpath=True,
                  )
               }}
     - mode: '0644'

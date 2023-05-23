@@ -30,6 +30,11 @@ values:
 {!- if cookiecutter.settings !}
   {= cookiecutter.settings | yaml(False) | indent(2) =}
 {!- endif !}
+  tofs:
+    files_switch:
+      - id
+      - roles
+      - os_family
   # Just here for testing
   added_in_defaults: defaults_value
   winner: defaults
