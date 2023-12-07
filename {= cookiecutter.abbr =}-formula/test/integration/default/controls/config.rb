@@ -24,10 +24,10 @@ control '{= cookiecutter.abbr_pysafe =}.config.file' do
       # rubocop:disable Lint/RedundantCopDisableDirective
       # rubocop:disable Layout/LineLength
       should include(
-        '"tofs": {"files_switch": ["any/path/can/be/used/here", "id", '\
-        '"roles", "osfinger", "os", "os_family"], "source_files": '\
-        '{"{= cookiecutter.abbr_pysafe =}-config-file-file-managed": ["example.tmpl.jinja"], '\
-        '"{= cookiecutter.abbr_pysafe =}-{= cookiecutter.subcomponent =}-config-file-file-managed": '\
+        '"tofs": {"files_switch": ["any/path/can/be/used/here", "id", ' \
+        '"roles", "osfinger", "os", "os_family"], "source_files": ' \
+        '{"{= cookiecutter.abbr_pysafe =}-config-file-file-managed": ["example.tmpl.jinja"], ' \
+        '"{= cookiecutter.abbr_pysafe =}-{= cookiecutter.subcomponent =}-config-file-file-managed": ' \
         '["{= cookiecutter.subcomponent =}-example.tmpl.jinja"]}'
       )
       # rubocop:enable Layout/LineLength
